@@ -1,5 +1,118 @@
-<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Crossroads Leadership Academy</title></head>
-<body><main id="main"></main></body>
-</html>
+<!-- PAGE SETTINGS
+title: Teen Leadership Academy in the RGV | For Students
+description: No perfect grades needed. Get a mentor, lead a real project, and leave with a plan. Free for Rio Grande Valley students. Apply in two minutes.
+-->
+
+<!-- ============ HERO: written for a 15-year-old, in second person ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">For students</span>
+    <h1>This is for you if you are tired of waiting for permission.</h1>
+    <p>You do not need perfect grades. You do not need a plan yet. You need to show up, do the work, and let someone who has been where you want to go help you get there.</p>
+    <div class="actions">
+      <a class="btn btn--teal" href="#apply" data-es="Inscribirse">Apply</a>
+      <a class="text-link" href="/contact/?i_am=Student" data-es="Hacer una pregunta">Ask a Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU WILL DO ============ -->
+<section class="section" aria-labelledby="do-title">
+  <div class="container">
+    <div class="grid grid--3">
+      <div class="card reveal">
+        <h2 class="h3" id="do-title">What you will actually do.</h2>
+        <ul class="checks">
+          <li>Meet with your mentor every week and work on goals you pick.</li>
+          <li>Plan and run a service project in your community, with a team you lead.</li>
+          <li>Stand up and present your project in front of a real audience.</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h2 class="h3">What it costs you.</h2>
+        <p><strong>Nothing but your time and your word.</strong></p>
+        <p>No fees. Nothing to buy. Scholarships cover all of it. What we ask is simple: show up, do the work, and keep your word.</p>
+      </div>
+      <div class="card reveal">
+        <h2 class="h3">What you get.</h2>
+        <ul class="checks">
+          <li>A mentor who knows your name and your goals.</li>
+          <li>A project you led, with results you can point to.</li>
+          <li>A written plan for what comes after high school.</li>
+          <li>People who will write your recommendation letters.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPLICATION FORM ============
+  Fields: name, grade, school, phone, parent name, parent phone, one open question. Tag: Student.
+  Submissions go to the form handler. Nothing is stored on this site.
+-->
+<section class="section section--white" id="apply" aria-labelledby="apply-title">
+  <div class="container narrow">
+    <h2 id="apply-title">Apply.</h2>
+    <p class="lead">Two minutes. Then a real person calls you within three days. We will talk with your parent or guardian too.</p>
+    <div class="form-card">
+      <p class="form__lang" lang="es"><button type="button" data-lang-toggle>Ver en español</button></p>
+      <form class="form" data-form="student" action="/api/submit" method="POST" novalidate
+        data-success="Got it. A real person will call you within three days."
+        data-success-es="Listo. Una persona real te llamará en los próximos tres días.">
+        <input type="hidden" name="form_type" value="student">
+        <div class="hp" aria-hidden="true"><label for="student-website">Leave this field empty</label><input id="student-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <div class="field">
+          <label for="student-name" data-es="Tu nombre completo">Your full name</label>
+          <input id="student-name" name="name" type="text" required autocomplete="name" maxlength="100" aria-describedby="student-name-error">
+          <p class="field__error" id="student-name-error" hidden></p>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="student-grade" data-es="Grado">Grade</label>
+            <select id="student-grade" name="grade" required aria-describedby="student-grade-error">
+              <option value="" data-es="Elige tu grado">Choose your grade</option>
+              <option value="7" data-es="7.º grado">7th grade</option>
+              <option value="8" data-es="8.º grado">8th grade</option>
+              <option value="9" data-es="9.º grado">9th grade</option>
+              <option value="10" data-es="10.º grado">10th grade</option>
+              <option value="11" data-es="11.º grado">11th grade</option>
+              <option value="12" data-es="12.º grado">12th grade</option>
+            </select>
+            <p class="field__error" id="student-grade-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="student-school" data-es="Escuela">School</label>
+            <input id="student-school" name="school" type="text" required maxlength="120" aria-describedby="student-school-error">
+            <p class="field__error" id="student-school-error" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="student-phone" data-es="Tu teléfono">Your phone</label>
+          <input id="student-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="student-phone-error">
+          <p class="field__error" id="student-phone-error" hidden></p>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="student-parent-name" data-es="Nombre del padre, madre o tutor">Parent or guardian name</label>
+            <input id="student-parent-name" name="parent_name" type="text" required maxlength="100" aria-describedby="student-parent-name-error">
+            <p class="field__error" id="student-parent-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="student-parent-phone" data-es="Teléfono del padre, madre o tutor">Parent or guardian phone</label>
+            <input id="student-parent-phone" name="parent_phone" type="tel" required inputmode="tel" maxlength="20" aria-describedby="student-parent-phone-error">
+            <p class="field__error" id="student-parent-phone-error" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="student-goal" data-es="¿Qué quieres que sea diferente dentro de un año?">What do you want to be different a year from now?</label>
+          <textarea id="student-goal" name="goal" required maxlength="1000" rows="4" aria-describedby="student-goal-error"></textarea>
+          <p class="field__error" id="student-goal-error" hidden></p>
+        </div>
+        <button class="btn btn--teal" type="submit" data-es="Inscribirse">Apply</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <p class="note">By applying, you agree that we can call you and your parent or guardian about the program. Read our <a href="/privacy/">privacy policy</a>.</p>
+  </div>
+</section>

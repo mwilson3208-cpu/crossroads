@@ -1,0 +1,52 @@
+<!-- FOOTER: contact details come from site.config.json. -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__about">
+      <p class="site-footer__brand">{{site.brand}}</p>
+      <p>{{site.missionLine}}</p>
+      <p class="site-footer__legal">{{site.legalName}} is a 501(c)(3) public charity. EIN {{site.ein}}. Gifts are tax deductible to the extent allowed by law.</p>
+      <p><a class="site-footer__give" href="{{site.givebutterUrl}}" data-track-location="footer" data-es="Donar en Givebutter">Give on Givebutter</a></p>
+    </div>
+    <div>
+      <h2 class="site-footer__heading" data-es="Contacto">Contact</h2>
+      <address class="site-footer__contact">
+        <p>{{contact.address}}</p>
+        <p>{{contact.phone}}</p>
+        <p>{{contact.email}}</p>
+      </address>
+      {{contact.social}}
+    </div>
+    <div>
+      <h2 class="site-footer__heading" data-es="Páginas">Pages</h2>
+      <ul class="site-footer__links">
+        <li><a href="/about/" data-es="Nosotros">About</a></li>
+        <li><a href="/programs/" data-es="Programa">Programs</a></li>
+        <li><a href="/students/" data-es="Estudiantes">Students</a></li>
+        <li><a href="/get-involved/" data-es="Participe">Get Involved</a></li>
+        <li><a href="/sponsors/" data-es="Patrocinadores">Sponsors</a></li>
+        <li><a href="/contact/" data-es="Contacto">Contact</a></li>
+        <li><a href="/privacy/" data-es="Política de privacidad">Privacy policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <form class="form form--inline" data-form="newsletter" action="/api/submit" method="POST" novalidate
+        data-success="You are on the list. Watch for the next student update."
+        data-success-es="Ya está en la lista. Espere la próxima actualización.">
+        <input type="hidden" name="form_type" value="newsletter">
+        <div class="hp" aria-hidden="true"><label for="newsletter-website">Leave this field empty</label><input id="newsletter-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="field">
+          <label class="site-footer__heading" for="newsletter-email" data-es="Reciba la actualización mensual de los estudiantes.">Get the monthly student update.</label>
+          <div class="form--inline__row">
+            <input id="newsletter-email" name="email" type="email" required autocomplete="email" maxlength="254" aria-describedby="newsletter-email-error">
+            <button class="btn btn--outline-light" type="submit" data-es="Suscribirse">Sign up</button>
+          </div>
+          <p class="field__error" id="newsletter-email-error" hidden></p>
+        </div>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <div class="container site-footer__base">
+    <p>&copy; {{build.year}} {{site.legalName}}</p>
+  </div>
+</footer>

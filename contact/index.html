@@ -1,5 +1,84 @@
-<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Crossroads Leadership Academy</title></head>
-<body><main id="main"></main></body>
-</html>
+<!-- PAGE SETTINGS
+title: Contact Crossroads Leadership Academy | Rio Grande Valley
+description: Talk to a person at Crossroads Leadership Academy. Parents, students, mentors, donors, sponsors, and media: we answer within one business day.
+-->
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1>Talk to a person.</h1>
+    <p>One form, one phone number, and a real answer within one business day.</p>
+    <div class="actions">
+      <a class="btn btn--light" href="#message" data-es="Enviar mensaje">Send Message</a>
+      <a class="btn btn--give" href="{{site.givebutterUrl}}" data-track-location="contact-hero" data-es="Donar ahora">Give Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM AND DETAILS ============
+  Fields: name, email, phone, I am a, message. Tag: the "I am a" value.
+  Contact details on the right come from site.config.json. No map until there is a physical program location to show. [CONFIRM location]
+-->
+<section class="section" id="message" aria-labelledby="message-title">
+  <div class="container contact-grid">
+    <div class="form-card">
+      <h2 id="message-title">Send a message.</h2>
+      <p class="form__lang" lang="es"><button type="button" data-lang-toggle>Ver en español</button></p>
+      <form class="form" data-form="contact" action="/api/submit" method="POST" novalidate
+        data-success="Received. We answer within one business day."
+        data-success-es="Recibido. Respondemos en un día hábil.">
+        <input type="hidden" name="form_type" value="contact">
+        <div class="hp" aria-hidden="true"><label for="contact-website">Leave this field empty</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="field">
+          <label for="contact-name" data-es="Nombre completo">Full name</label>
+          <input id="contact-name" name="name" type="text" required autocomplete="name" maxlength="100" aria-describedby="contact-name-error">
+          <p class="field__error" id="contact-name-error" hidden></p>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="contact-email" data-es="Correo electrónico">Email</label>
+            <input id="contact-email" name="email" type="email" required autocomplete="email" maxlength="254" aria-describedby="contact-email-error">
+            <p class="field__error" id="contact-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contact-phone"><span data-es="Teléfono">Phone</span> <span class="optional" data-es="(opcional)">(optional)</span></label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="contact-phone-error">
+            <p class="field__error" id="contact-phone-error" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="contact-iam" data-es="Soy">I am a</label>
+          <select id="contact-iam" name="i_am" required aria-describedby="contact-iam-error">
+            <option value="" data-es="Elija una opción">Choose one</option>
+            <option value="Parent" data-es="Padre, madre o tutor">Parent</option>
+            <option value="Student" data-es="Estudiante">Student</option>
+            <option value="Donor" data-es="Donante">Donor</option>
+            <option value="Sponsor" data-es="Patrocinador">Sponsor</option>
+            <option value="Mentor" data-es="Mentor">Mentor</option>
+            <option value="Media" data-es="Medios de comunicación">Media</option>
+            <option value="Other" data-es="Otro">Other</option>
+          </select>
+          <p class="field__error" id="contact-iam-error" hidden></p>
+        </div>
+        <div class="field">
+          <label for="contact-message" data-es="Mensaje">Message</label>
+          <textarea id="contact-message" name="message" required maxlength="2000" rows="5" aria-describedby="contact-message-error"></textarea>
+          <p class="field__error" id="contact-message-error" hidden></p>
+        </div>
+        <button class="btn btn--navy" type="submit" data-es="Enviar mensaje">Send Message</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div>
+      <h2 class="h3">Reach us directly.</h2>
+      <ul class="contact-list">
+        <li><strong data-es="Teléfono">Phone</strong>{{contact.phone}}</li>
+        <li><strong data-es="Correo electrónico">Email</strong>{{contact.email}}</li>
+        <li><strong data-es="Dirección postal">Mailing address</strong>{{contact.address}}</li>
+        <li><strong data-es="Horario de oficina">Office hours</strong>{{contact.hours}}</li>
+      </ul>
+      <p class="note">Press and media: choose Media in the form and we will connect you with our Executive Director.</p>
+    </div>
+  </div>
+</section>

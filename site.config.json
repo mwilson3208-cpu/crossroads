@@ -1,0 +1,34 @@
+{
+  "_readme": "Site-wide facts. Edit a value here and run npm run build; every page updates. Leave a value empty until it is confirmed and the site shows a [CONFIRM] marker in its place.",
+  "siteUrl": "https://crossroadsleadershipacademy.org",
+  "brand": "Crossroads Leadership Academy",
+  "legalName": "Crossroads Academy, Inc.",
+  "ein": "38-3864606",
+  "missionLine": "Mentors, real leadership, and a plan for life after high school for Rio Grande Valley teenagers, at no cost to their families.",
+  "givebutterUrl": "https://givebutter.com/CrossroadsAcademy",
+  "executiveDirector": "Cristina Solis Wilson",
+  "phone": "",
+  "email": "",
+  "address": {
+    "street": "",
+    "city": "",
+    "state": "TX",
+    "zip": ""
+  },
+  "officeHours": "",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "linkedin": "",
+    "youtube": ""
+  },
+  "analytics": {
+    "_readme": "Paste a GA4 measurement ID (looks like G-XXXXXXX) to turn on Google Analytics. For a GoHighLevel pixel, paste its snippet into partials/analytics.html instead.",
+    "ga4MeasurementId": ""
+  },
+  "documents": {
+    "programOverview": "/assets/docs/program-overview.pdf",
+    "sponsorPacket": "/assets/docs/sponsor-packet.pdf"
+  },
+  "ogImage": "/assets/img/og-default.jpg"
+}

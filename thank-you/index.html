@@ -1,5 +1,51 @@
-<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Crossroads Leadership Academy</title></head>
-<body><main id="main"></main></body>
-</html>
+<!-- PAGE SETTINGS
+title: Thank You for Your Gift | Crossroads Leadership Academy
+description: Thank you for giving to Crossroads Leadership Academy. Your gift funds mentors, scholarships, and leadership projects for Rio Grande Valley teens.
+noindex: yes
+bodyClass: page-thank-you
+-->
+
+<!--
+  GIVEBUTTER REDIRECT TARGET
+  In Givebutter: open the campaign, go to Settings, then the redirect or "after donation" setting, and enter
+  https://crossroadsleadershipacademy.org/thank-you/  [CONFIRM redirect is set and tested]
+  This page fires the analytics event donation_complete when it loads.
+-->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Thank you</span>
+    <h1>You just backed a Valley teenager.</h1>
+    <p>Your receipt is on its way from Givebutter. Keep it for your taxes.</p>
+  </div>
+</section>
+
+<!-- NOTE FROM THE EXECUTIVE DIRECTOR [CONFIRM wording with Cristina] -->
+<section class="section">
+  <div class="container narrow">
+    <div class="card">
+      <h2 class="h3">A note from Cristina.</h2>
+      <p>Thank you. Your gift goes to a student's seat in YOLI Leadership Academy: the mentor time, the supplies, and the project that student will lead in our community.</p>
+      <p>You will see what it builds. We send a monthly student update, and every graduation is open to the people who paid for it.</p>
+      <p class="founder__sig">Cristina Solis Wilson<span>Co-Founder and Executive Director</span></p>
+      <p class="note">[CONFIRM final wording with Cristina]</p>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE -->
+<section class="section section--white" aria-labelledby="share-title">
+  <div class="container narrow">
+    <h2 id="share-title">Ask one more person.</h2>
+    <p class="lead">Most of our donors give because someone they know asked. Send this to one friend, coworker, or business owner in the Valley.</p>
+    <div class="share">
+      <button class="btn btn--navy" type="button" data-share
+        data-share-url="{{site.siteUrl}}/"
+        data-share-text="I just gave to Crossroads Leadership Academy. They match Rio Grande Valley teens with mentors and a real plan after high school."
+        aria-describedby="share-note" data-es="Compartir">Share Crossroads</button>
+      <a class="btn btn--outline" href="https://www.facebook.com/sharer/sharer.php?u={{site.siteUrl}}/" rel="noopener" target="_blank">Facebook<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn--outline" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.siteUrl}}/" rel="noopener" target="_blank">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn--outline" href="mailto:?subject=Crossroads%20Leadership%20Academy&amp;body=I%20just%20gave%20to%20Crossroads%20Leadership%20Academy.%20They%20match%20Rio%20Grande%20Valley%20teens%20with%20mentors%20and%20a%20real%20plan%20after%20high%20school.%20{{site.siteUrl}}/" data-es="Correo">Email</a>
+    </div>
+    <p class="note" id="share-note" role="status"></p>
+  </div>
+</section>

@@ -1,4 +1,59 @@
+# Netlify settings. Connect the repository in Netlify and these are picked up automatically.
+
 [build]
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+
+# Build and run the form handler on the same Node version the site was tested with.
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Every form posts to /api/submit, which runs netlify/functions/submit.js.
+[[redirects]]
+  from = "/api/submit"
+  to = "/.netlify/functions/submit"
+  status = 200
+  force = true
+
+# HTTPS only: Netlify redirects http to https automatically once the certificate is issued.
+# This header tells browsers to stay on https.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-Frame-Options = "SAMEORIGIN"
+
+# CSS and JS links carry a version (?v=...) that changes on every edit, and fonts never change,
+# so these can be cached for a year.
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Photos and PDFs may be replaced under the same file name, so keep their cache short.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/docs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

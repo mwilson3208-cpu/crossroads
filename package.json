@@ -1,0 +1,23 @@
+{
+  "name": "crossroads-leadership-academy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for Crossroads Leadership Academy, a 501(c)(3) youth leadership nonprofit in the Rio Grande Valley.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "confirm": "node scripts/build.js --confirm",
+    "serve": "node scripts/serve.js",
+    "test": "node scripts/test-forms.js",
+    "test:browser": "node scripts/test-browser.js",
+    "lighthouse": "node scripts/lighthouse.js",
+    "images": "node scripts/make-images.js",
+    "pdfs": "node scripts/make-pdfs.js"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "lighthouse": "^13.6.0"
+  }
+}

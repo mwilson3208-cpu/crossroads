@@ -1,0 +1,33 @@
+<!-- HEADER: edit once here and every page updates. -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="/">
+      <!-- Placeholder mark until the official logo is supplied [CONFIRM logo] -->
+      <svg class="logo__mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M9 31 31 9M9 9l22 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="4" fill="#8FD3CD"/>
+      </svg>
+      <span class="logo__text"><span class="logo__name">Crossroads</span><span class="logo__sub">Leadership Academy</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        <li><a href="/about/" data-nav="/about/" data-es="Nosotros">About</a></li>
+        <li><a href="/programs/" data-nav="/programs/" data-es="Programa">Programs</a></li>
+        <li><a href="/students/" data-nav="/students/" data-es="Estudiantes">Students</a></li>
+        <li><a href="/get-involved/" data-nav="/get-involved/" data-es="Participe">Get Involved</a></li>
+        <li><a href="/sponsors/" data-nav="/sponsors/" data-es="Patrocinadores">Sponsors</a></li>
+        <li><a href="/contact/" data-nav="/contact/" data-es="Contacto">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <button class="lang-toggle" type="button" data-lang-toggle lang="es"><span class="lang-toggle__long">Español</span><span class="lang-toggle__short" aria-hidden="true">ES</span></button>
+      <a class="btn btn--give btn--sm" href="{{site.givebutterUrl}}" data-track-location="header" data-es="Donar ahora">Give Now</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span><span class="sr-only" data-es="Menú">Menu</span>
+      </button>
+    </div>
+  </div>
+  <!-- Shown only when Spanish is on. The rest of the copy is English until full translation is approved [CONFIRM translation scope]. -->
+  <p class="lang-note" data-lang-only="es" lang="es" hidden>Los botones y formularios están en español. Para hablar con una persona en español, llame al {{contact.phoneText}}.</p>
+</header>

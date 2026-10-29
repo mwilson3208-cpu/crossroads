@@ -1,5 +1,179 @@
-<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Crossroads Leadership Academy</title></head>
-<body><main id="main"></main></body>
-</html>
+<!-- PAGE SETTINGS
+title: Get Involved: Give, Mentor, or Sponsor | Crossroads
+description: Three ways to back Rio Grande Valley teens: fund a student's seat, mentor a few hours a month, or sponsor a class. Event volunteers welcome too.
+-->
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Get involved</span>
+    <h1>Three ways in.</h1>
+    <p>Fund a seat, give your time, or put your business name on a graduate. Every one of them reaches a Valley teenager.</p>
+    <div class="actions">
+      <a class="btn btn--give" href="{{site.givebutterUrl}}" data-track-location="involved-hero" data-es="Donar ahora">Give Now</a>
+      <a class="btn btn--teal" href="#mentor" data-es="Ser mentor">Become a Mentor</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE EQUAL PANELS ============ -->
+<section class="section" aria-label="Three ways in">
+  <div class="container">
+    <div class="grid grid--3">
+      <article class="door">
+        <h2 class="door__title h3">Give <span class="door__sub">Fund a seat</span></h2>
+        <p>Pick a gift and see exactly what it covers, from supplies for a session to a full scholarship.</p>
+        <a class="btn btn--outline" href="#give" data-es="Ver opciones de donación">See Gift Options</a>
+      </article>
+      <article class="door">
+        <h2 class="door__title h3">Mentor <span class="door__sub">Give your time</span></h2>
+        <p>About [CONFIRM] hours a month. We train you, match you, and back you up.</p>
+        <a class="btn btn--outline" href="#mentor" data-es="Cómo ser mentor">How Mentoring Works</a>
+      </article>
+      <article class="door">
+        <h2 class="door__title h3">Sponsor <span class="door__sub">Put your name on it</span></h2>
+        <p>Local businesses fund seats, projects, and events, and get seen doing it.</p>
+        <a class="btn btn--outline" href="/sponsors/" data-es="Ver patrocinios">See Sponsorships</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GIVE ============ -->
+<section class="section section--white" id="give" aria-labelledby="give-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="give-title">Give.</h2>
+      <p>We fund students, not overhead. Choose the gift that matches what you want to see happen.</p>
+    </div>
+    {{> gift-tiers}}
+    <div class="actions">
+      <a class="btn btn--give" href="{{site.givebutterUrl}}" data-track-location="involved-give" data-es="Donar ahora">Give Now</a>
+      <a class="text-link" href="{{site.givebutterUrl}}?frequency=monthly" data-tier="monthly" data-track-location="involved-monthly" data-es="Donar cada mes">Give monthly</a>
+    </div>
+    <p class="note">Gifts are processed by Givebutter and are tax deductible to the extent allowed by law. EIN {{site.ein}}.</p>
+  </div>
+</section>
+
+<!-- ============ MENTOR ============
+  Fields: name, email, phone, occupation, hours per month, why you want to mentor. Tag: Mentor.
+-->
+<section class="section" id="mentor" aria-labelledby="mentor-title">
+  <div class="container contact-grid">
+    <div>
+      <h2 id="mentor-title">Mentor.</h2>
+      <p class="lead">You do not need to be an expert. You need to show up.</p>
+      <dl class="facts">
+        <div><dt>Time</dt><dd>About [CONFIRM] hours a month, including weekly contact with your student.</dd></div>
+        <div><dt>Training</dt><dd>We train you before you meet a student, so you know what to do and what not to do. [CONFIRM training format and length]</dd></div>
+        <div><dt>Background check</dt><dd>Required for every mentor before any contact with a student. [CONFIRM background check policy and provider]</dd></div>
+        <div><dt>Who we need</dt><dd>If you have finished high school, built a career, served in the military, or run a business, you have something a Valley teenager needs to hear.</dd></div>
+      </dl>
+    </div>
+    <div class="form-card">
+      <h3>Apply to mentor.</h3>
+      <p class="form__lang" lang="es"><button type="button" data-lang-toggle>Ver en español</button></p>
+      <form class="form" data-form="mentor" action="/api/submit" method="POST" novalidate
+        data-success="Thank you. We will reach out to schedule a short conversation."
+        data-success-es="Gracias. Nos comunicaremos con usted para programar una breve conversación.">
+        <input type="hidden" name="form_type" value="mentor">
+        <div class="hp" aria-hidden="true"><label for="mentor-website">Leave this field empty</label><input id="mentor-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="field">
+          <label for="mentor-name" data-es="Nombre completo">Full name</label>
+          <input id="mentor-name" name="name" type="text" required autocomplete="name" maxlength="100" aria-describedby="mentor-name-error">
+          <p class="field__error" id="mentor-name-error" hidden></p>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="mentor-email" data-es="Correo electrónico">Email</label>
+            <input id="mentor-email" name="email" type="email" required autocomplete="email" maxlength="254" aria-describedby="mentor-email-error">
+            <p class="field__error" id="mentor-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="mentor-phone" data-es="Teléfono">Phone</label>
+            <input id="mentor-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="mentor-phone-error">
+            <p class="field__error" id="mentor-phone-error" hidden></p>
+          </div>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="mentor-occupation" data-es="Ocupación">Occupation</label>
+            <input id="mentor-occupation" name="occupation" type="text" required autocomplete="organization-title" maxlength="120" aria-describedby="mentor-occupation-error">
+            <p class="field__error" id="mentor-occupation-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="mentor-hours" data-es="Horas al mes">Hours per month</label>
+            <select id="mentor-hours" name="hours" required aria-describedby="mentor-hours-error">
+              <option value="" data-es="Elija una opción">Choose one</option>
+              <option value="2-4" data-es="2 a 4 horas">2 to 4 hours</option>
+              <option value="4-6" data-es="4 a 6 horas">4 to 6 hours</option>
+              <option value="6+" data-es="6 horas o más">6 hours or more</option>
+              <option value="Not sure" data-es="Todavía no sé">Not sure yet</option>
+            </select>
+            <p class="field__error" id="mentor-hours-error" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="mentor-why" data-es="¿Por qué quiere ser mentor?">Why do you want to mentor?</label>
+          <textarea id="mentor-why" name="why" required maxlength="1000" rows="4" aria-describedby="mentor-why-error"></textarea>
+          <p class="field__error" id="mentor-why-error" hidden></p>
+        </div>
+        <button class="btn btn--teal" type="submit" data-es="Enviar solicitud">Apply to Mentor</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPONSOR ============ -->
+<section class="section section--white" id="sponsor" aria-labelledby="sponsor-title">
+  <div class="container narrow">
+    <h2 id="sponsor-title">Sponsor.</h2>
+    <p class="lead">Your business funds seats, projects, or events, and your name goes on the graduation program, the event signs, and our social media. Founding sponsor seats are open now.</p>
+    <div class="actions">
+      <a class="btn btn--navy" href="/sponsors/" data-es="Ver patrocinios">See Sponsorships</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOLUNTEER FOR AN EVENT ============
+  Fields: name, email, phone (optional), how you would like to help (optional). Tag: Volunteer.
+-->
+<section class="section" id="volunteer" aria-labelledby="volunteer-title">
+  <div class="container narrow">
+    <h2 id="volunteer-title">Volunteer for an event.</h2>
+    <p class="lead">Not ready to mentor? Help at a graduation, a service day, or a fundraiser. One afternoon counts.</p>
+    <div class="form-card">
+      <form class="form" data-form="volunteer" action="/api/submit" method="POST" novalidate
+        data-success="Thank you. We will reach out when the next event is on the calendar."
+        data-success-es="Gracias. Le avisaremos cuando tengamos el próximo evento en el calendario.">
+        <input type="hidden" name="form_type" value="volunteer">
+        <div class="hp" aria-hidden="true"><label for="volunteer-website">Leave this field empty</label><input id="volunteer-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="volunteer-name" data-es="Nombre completo">Full name</label>
+            <input id="volunteer-name" name="name" type="text" required autocomplete="name" maxlength="100" aria-describedby="volunteer-name-error">
+            <p class="field__error" id="volunteer-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="volunteer-email" data-es="Correo electrónico">Email</label>
+            <input id="volunteer-email" name="email" type="email" required autocomplete="email" maxlength="254" aria-describedby="volunteer-email-error">
+            <p class="field__error" id="volunteer-email-error" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="volunteer-phone"><span data-es="Teléfono">Phone</span> <span class="optional" data-es="(opcional)">(optional)</span></label>
+          <input id="volunteer-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="volunteer-phone-error">
+          <p class="field__error" id="volunteer-phone-error" hidden></p>
+        </div>
+        <div class="field">
+          <label for="volunteer-interest"><span data-es="¿Cómo le gustaría ayudar?">How would you like to help?</span> <span class="optional" data-es="(opcional)">(optional)</span></label>
+          <textarea id="volunteer-interest" name="interest" maxlength="1000" rows="3" aria-describedby="volunteer-interest-error"></textarea>
+          <p class="field__error" id="volunteer-interest-error" hidden></p>
+        </div>
+        <button class="btn btn--teal" type="submit" data-es="Quiero ayudar">Count Me In</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
