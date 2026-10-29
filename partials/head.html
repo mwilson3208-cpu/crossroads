@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.description}}">
+<meta name="robots" content="{{page.robots}}">
+<link rel="canonical" href="{{page.canonical}}">
+<meta name="theme-color" content="#14213D">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<!-- Open Graph and social cards. The image is set per page with ogImage in PAGE SETTINGS, otherwise site.config.json ogImage. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{site.brand}}">
+<meta property="og:title" content="{{page.ogTitle}}">
+<meta property="og:description" content="{{page.description}}">
+<meta property="og:url" content="{{page.canonical}}">
+<meta property="og:image" content="{{page.ogImage}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Crossroads Leadership Academy, Rio Grande Valley, Texas">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Fonts: Google Fonts (Fraunces and Inter), self-hosted from /assets/fonts with font-display: swap so text never waits on a font. -->
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v={{build.cssVersion}}">
+<script>document.documentElement.className+=' js';</script>
+{{page.jsonld}}
+{{page.analytics}}
