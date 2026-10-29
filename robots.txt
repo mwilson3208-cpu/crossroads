@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you/
+
+# The thank-you and 404 pages carry a noindex tag instead of a Disallow line,
+# so search engines can read the tag and keep them out of results.
 
 Sitemap: {{site.siteUrl}}/sitemap.xml
