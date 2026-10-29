@@ -27,6 +27,9 @@ if (fs.existsSync(envFile)) {
   }
 }
 
+// Without a destination, submissions are printed to this terminal instead of sent anywhere.
+if (!process.env.FORM_DESTINATION) process.env.FORM_DESTINATION = 'log';
+
 const { handler } = require('../netlify/functions/submit.js');
 
 const TYPES = {
@@ -105,7 +108,7 @@ if (require.main === module) {
   const port = Number(process.env.PORT) || 8080;
   server.listen(port, () => {
     console.log(`Serving dist/ at http://localhost:${port}`);
-    console.log(`Form handler destination: ${process.env.FORM_DESTINATION || '(not set, submissions are logged only)'}`);
+    console.log(`Form handler destination: ${process.env.FORM_DESTINATION}`);
   });
 }
 
