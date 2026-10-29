@@ -5,6 +5,10 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# Build and run the form handler on the same Node version the site was tested with.
+[build.environment]
+  NODE_VERSION = "22"
+
 [functions]
   node_bundler = "esbuild"
 
