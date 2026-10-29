@@ -43,7 +43,7 @@ Use only these facts. Everything else about the organization is a [CONFIRM] plac
 - Legal name: Crossroads Academy, Inc. Site brand: Crossroads Leadership Academy.
 - Status: 501(c)(3) public charity, EIN 38-3864606.
 - Service area: Rio Grande Valley, South Texas.
-- Co-founder and Executive Director: Cristina Solis Wilson.
+- Founder: Cristina Solis Wilson. On the site her title is "Founder" (owner's instruction, October 2026).
 - Flagship program: YOLI Leadership Academy.
 - Current phase: relaunched in 2026 after a rebuild.
 - Current website: crossroadsleadershipacademy.org.
@@ -141,7 +141,7 @@ Use this copy verbatim. Numbers are the build order from the top down.
 
 5. Founder note. Photo of Cristina Solis Wilson [CONFIRM]. Heading: Why we built this.
    - Body, first person [CONFIRM final wording with Cristina]: I grew up in the Rio Grande Valley. I know what it costs a young person to have no one in their corner who has already been where they want to go. I spent my career leading soldiers, and I learned that leadership is taught, practiced, and earned. It is not reserved for people with the right last name or the right zip code. Crossroads exists so that every teenager in the Valley has someone who will teach it to them, hold them to it, and open the first door. That is the whole mission.
-   - Signature line: Cristina Solis Wilson, Co-Founder and Executive Director
+   - Signature line: Cristina Solis Wilson, Founder
 
 6. Donor section. Heading: Your gift buys a seat. Here is exactly what the seat costs.
    - Lead: We fund students, not overhead. Choose the gift that matches what you want to see happen.
