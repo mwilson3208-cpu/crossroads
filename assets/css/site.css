@@ -211,7 +211,7 @@ mark.confirm {
   font: 600 .9rem/1 var(--font-body); padding: 0 10px;
 }
 .lang-toggle:hover, .menu-toggle:hover { border-color: var(--on-navy); }
-.lang-toggle__long { display: none; }
+.lang-toggle__long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
 .menu-toggle { display: inline-grid; place-items: center; padding: 0; }
 .menu-toggle__bars, .menu-toggle__bars::before, .menu-toggle__bars::after {
@@ -251,7 +251,7 @@ html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
   .site-nav__list, .js .site-nav__list { display: flex; gap: 4px 18px; padding: 0; border: 0; }
   .js .site-nav__list a { min-height: 48px; font-size: 1rem; border: 0; }
   .menu-toggle { display: none; }
-  .lang-toggle__long { display: inline; }
+  .lang-toggle__long { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
   .lang-toggle__short { display: none; }
   .lang-toggle { padding: 0 14px; }
 }

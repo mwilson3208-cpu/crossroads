@@ -74,7 +74,6 @@
       sending: 'Sending...',
       failed: 'Something went wrong and your form was not sent. Please try again in a minute.',
       toggle: 'English',
-      toggleLabel: 'English: view buttons and forms in English',
       copied: 'Link copied. Paste it anywhere to share.'
     },
     es: {
@@ -85,7 +84,6 @@
       sending: 'Enviando...',
       failed: 'Algo salió mal y su formulario no se envió. Intente de nuevo en un minuto.',
       toggle: 'Español',
-      toggleLabel: 'Español: ver botones y formularios en español',
       copied: 'Enlace copiado. Péguelo donde quiera compartirlo.'
     }
   };
@@ -125,7 +123,6 @@
     $all('[data-lang-toggle]').forEach(function (btn) {
       var other = toEs ? MSG.en : MSG.es;
       btn.setAttribute('lang', toEs ? 'en' : 'es');
-      if (btn.classList.contains('lang-toggle')) btn.setAttribute('aria-label', other.toggleLabel);
       btn.setAttribute('aria-pressed', toEs ? 'true' : 'false');
       var long = btn.querySelector('.lang-toggle__long');
       var short = btn.querySelector('.lang-toggle__short');
