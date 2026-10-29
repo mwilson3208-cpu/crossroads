@@ -2,13 +2,11 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="logo" href="/">
-      <!-- Placeholder mark until the official logo is supplied [CONFIRM logo] -->
-      <svg class="logo__mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true" focusable="false">
-        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
-        <path d="M9 31 31 9M9 9l22 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="20" cy="20" r="4" fill="#8FD3CD"/>
-      </svg>
-      <span class="logo__text"><span class="logo__name">Crossroads</span><span class="logo__sub">Leadership Academy</span></span>
+      <!-- Official logo. To swap it, replace crossroads-logo.webp and crossroads-logo.png in assets/img (keep the same names). -->
+      <picture>
+        <source srcset="/assets/img/crossroads-logo.webp" type="image/webp">
+        <img class="logo__img" src="/assets/img/crossroads-logo.png" width="504" height="112" alt="Crossroads Leadership Academy, home">
+      </picture>
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul class="site-nav__list">
