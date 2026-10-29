@@ -1,5 +1,107 @@
 <!-- PAGE SETTINGS
-title: Crossroads Leadership Academy
-description: Youth leadership nonprofit serving the Rio Grande Valley.
+title: About Crossroads Leadership Academy | RGV Youth Nonprofit
+description: Meet the Valley leaders behind Crossroads Leadership Academy, a 501(c)(3) youth nonprofit in South Texas. EIN 38-3864606.
 -->
-<section class="page-hero"><div class="container"><h1>Crossroads Leadership Academy</h1></div></section>
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">About us</span>
+    <h1>A Valley organization, run by Valley leaders.</h1>
+    <p>Local mentors, local sponsors, and results you can see at a graduation in your own town.</p>
+    <div class="actions">
+      <a class="btn btn--light" href="#team" data-es="Conozca al equipo">Meet the Team</a>
+      <a class="btn btn--give" href="{{site.givebutterUrl}}" data-track-location="about-hero" data-es="Donar ahora">Give Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORIGIN STORY (about 150 words) [CONFIRM with Cristina] ============ -->
+<section class="section" aria-labelledby="story-title">
+  <div class="container narrow">
+    <h2 id="story-title">How Crossroads started.</h2>
+    <p>Crossroads Leadership Academy started with a simple belief. The Rio Grande Valley is full of teenagers who can lead, and too few of them have an adult outside the family who has already walked the road they want to take.</p>
+    <p>Co-founder Cristina Solis Wilson grew up in the Valley and spent a career leading soldiers, where leadership is taught, practiced, and earned. Crossroads was built so Valley teenagers can learn it from Valley adults, at no cost to their families.</p>
+    <p>The flagship is YOLI Leadership Academy. Students are matched with a mentor, lead a real service project, and leave with a written plan for college, a trade, the military, or a business of their own.</p>
+    <p>In 2026 we relaunched after a rebuild. The goal has not changed: every teenager in the Valley gets someone in their corner.</p>
+    <p class="note">[CONFIRM origin story, founding year, and co-founders with Cristina]</p>
+  </div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section class="section section--navy" aria-labelledby="mission-title">
+  <div class="container narrow">
+    <h2 class="eyebrow" id="mission-title">Our mission</h2>
+    <p class="band__line band__line--left">Every teenager in the Rio Grande Valley gets a mentor, real leadership experience, and a clear plan for college and career, no matter what their family can pay.</p>
+    <p class="note">[CONFIRM official mission statement]</p>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP ============
+  One card per person: photo, name, role, two-line bio. [CONFIRM board members, photos, and bios]
+  Photos: square WebP, about 400x400, under 100KB, saved in assets/img/. Replace a <div class="photo-slot ..."> with:
+  <img class="photo" src="/assets/img/FILE.webp" width="400" height="400" loading="lazy" alt="Full name, role at Crossroads Leadership Academy">
+-->
+<section class="section section--white" id="team" aria-labelledby="team-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="team-title">Leadership.</h2>
+      <p>The people accountable for every student, every mentor, and every dollar.</p>
+    </div>
+    <div class="people">
+      <article class="card card--flat person">
+        <div class="photo-slot photo-slot--round">[CONFIRM photo]</div>
+        <div>
+          <h3>Cristina Solis Wilson</h3>
+          <span class="person__role">Co-Founder and Executive Director</span>
+          <p>Grew up in the Rio Grande Valley and spent a career leading soldiers. Co-founded Crossroads to teach Valley teenagers that leadership is earned, not inherited.</p>
+          <p class="note">[CONFIRM bio wording]</p>
+        </div>
+      </article>
+      <article class="card card--flat person">
+        <div class="photo-slot photo-slot--round">[CONFIRM photo]</div>
+        <div>
+          <h3>Board of Directors</h3>
+          <span class="person__role">Governance and oversight</span>
+          <p>[CONFIRM board member names, roles, photos, and two-line bios. Add one card per member.]</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="section" aria-labelledby="trust-title">
+  <div class="container narrow">
+    <h2 id="trust-title">Check our work.</h2>
+    <p class="lead">You should know exactly who you are giving to. Here is the paperwork.</p>
+    <dl class="facts">
+      <div><dt>Legal name</dt><dd>{{site.legalName}}</dd></div>
+      <div><dt>Status</dt><dd>501(c)(3) public charity. Gifts are tax deductible to the extent allowed by law.</dd></div>
+      <div><dt>EIN</dt><dd>{{site.ein}}. <a href="https://apps.irs.gov/app/eos/" rel="noopener">Verify it with the IRS Tax Exempt Organization Search</a>.</dd></div>
+      <div><dt>Donations</dt><dd>Processed by Givebutter at <a href="{{site.givebutterUrl}}" data-track-location="about-trust">givebutter.com/CrossroadsAcademy</a>. [CONFIRM Givebutter verification status]</dd></div>
+      <div><dt>Form 990</dt><dd>[CONFIRM link to the most recent Form 990 when available]</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============
+  List confirmed partner organizations only. Remove this whole section if none are confirmed at launch. [CONFIRM partners]
+-->
+<section class="section section--white" aria-labelledby="partners-title">
+  <div class="container narrow">
+    <h2 id="partners-title">Partners.</h2>
+    <p>[CONFIRM partner organizations, or remove this section before launch]</p>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="section" aria-labelledby="about-give-title">
+  <div class="container narrow center">
+    <h2 id="about-give-title">Put a mentor in a Valley teenager's corner.</h2>
+    <p class="lead">Your gift covers the seat, the supplies, and the mentor time. Families pay nothing.</p>
+    <div class="actions actions--center">
+      <a class="btn btn--give" href="{{site.givebutterUrl}}" data-track-location="about-close" data-es="Donar ahora">Give Now</a>
+    </div>
+  </div>
+</section>

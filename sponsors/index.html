@@ -1,5 +1,147 @@
 <!-- PAGE SETTINGS
-title: Crossroads Leadership Academy
-description: Youth leadership nonprofit serving the Rio Grande Valley.
+title: Sponsor a Youth Program in Texas | Crossroads Sponsors
+description: Put your business name on a Rio Grande Valley graduate. Founding, Class, Project, and Event sponsorships fund seats for local teens.
 -->
-<section class="page-hero"><div class="container"><h1>Crossroads Leadership Academy</h1></div></section>
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">For local businesses</span>
+    <h1>Put your business name on a graduate.</h1>
+    <p>Local sponsors fund seats and get seen doing it.</p>
+    <div class="actions">
+      <a class="btn btn--light" href="#packet" data-es="Solicitar el paquete de patrocinio">Request Sponsor Packet</a>
+      <a class="btn btn--give" href="{{site.givebutterUrl}}" data-track-location="sponsors-hero" data-es="Donar ahora">Give Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY SPONSOR ============ -->
+<section class="section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="why-title">Built by the Valley, for the Valley.</h2>
+      <p>Your sponsorship stays here. It pays for Valley students, led by Valley mentors, with results you can see at a graduation in your own town.</p>
+    </div>
+    <div class="grid grid--3">
+      <article class="card card--accent reveal">
+        <h3>Seen by the families you serve.</h3>
+        <p>Your name goes where Valley parents, students, and business owners look: the graduation program, event signs, and our social media.</p>
+      </article>
+      <article class="card card--accent reveal">
+        <h3>A result you can point to.</h3>
+        <p>You fund a seat, a project, or an event, not a general fund. You can stand in the room when it happens.</p>
+      </article>
+      <article class="card card--accent reveal">
+        <h3>Tax deductible.</h3>
+        <p>{{site.legalName}} is a 501(c)(3) public charity, EIN {{site.ein}}.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPONSOR TIERS ============
+  Amounts and benefits are not confirmed. Replace each [CONFIRM] once approved. [CONFIRM amounts and benefits]
+  Keep the data-label attributes: they label each cell on phones.
+-->
+<section class="section section--white" id="tiers" aria-labelledby="tiers-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="tiers-title">Sponsorship levels.</h2>
+      <p>Every level funds students directly. Pick the one that fits your business.</p>
+    </div>
+    <table class="tier-table">
+      <thead>
+        <tr><th scope="col">Level</th><th scope="col">Amount</th><th scope="col">What it funds</th><th scope="col">How we recognize you</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Founding Sponsor</th>
+          <td data-label="Amount">[CONFIRM amount]</td>
+          <td data-label="What it funds">Seats in the first class after the 2026 relaunch. [CONFIRM]</td>
+          <td data-label="How we recognize you">Logo on the website and the graduation program, recognition at every event, and social media features. [CONFIRM]</td>
+        </tr>
+        <tr>
+          <th scope="row">Class Sponsor</th>
+          <td data-label="Amount">[CONFIRM amount]</td>
+          <td data-label="What it funds">Scholarships for a full class of students. [CONFIRM]</td>
+          <td data-label="How we recognize you">Logo in the graduation program, recognition at graduation, and a social media thank-you. [CONFIRM]</td>
+        </tr>
+        <tr>
+          <th scope="row">Project Sponsor</th>
+          <td data-label="Amount">[CONFIRM amount]</td>
+          <td data-label="What it funds">One student-led community service project, from planning to delivery. [CONFIRM]</td>
+          <td data-label="How we recognize you">Your name on the project, recognition when students present it, and a social media feature. [CONFIRM]</td>
+        </tr>
+        <tr>
+          <th scope="row">Event Sponsor</th>
+          <td data-label="Amount">[CONFIRM amount]</td>
+          <td data-label="What it funds">One graduation or community event. [CONFIRM]</td>
+          <td data-label="How we recognize you">Your name on event signs, recognition from the stage, and a social media thank-you. [CONFIRM]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">Sponsorships are tax deductible to the extent allowed by law. Consult your tax advisor.</p>
+    <div class="actions">
+      <a class="btn btn--navy" href="#packet" data-es="Solicitar el paquete de patrocinio">Request the Sponsor Packet</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPONSOR PACKET REQUEST ============
+  Fields: business, contact, email, phone, tier of interest. Tag: Sponsor.
+  The form handler emails the Sponsor Packet PDF to the requester when an email sender is set up (see README).
+-->
+<section class="section" id="packet" aria-labelledby="packet-title">
+  <div class="container narrow">
+    <h2 id="packet-title">Request the Sponsor Packet.</h2>
+    <p class="lead">One page with every level, what it funds, and how we recognize you. Our Executive Director follows up personally.</p>
+    <div class="form-card">
+      <p class="form__lang" lang="es"><button type="button" data-lang-toggle>Ver en español</button></p>
+      <form class="form" data-form="sponsor" action="/api/submit" method="POST" novalidate
+        data-success="Your packet is on the way. Expect a call from our Executive Director."
+        data-success-es="Su paquete va en camino. Espere una llamada personal de la dirección ejecutiva.">
+        <input type="hidden" name="form_type" value="sponsor">
+        <div class="hp" aria-hidden="true"><label for="sponsor-website">Leave this field empty</label><input id="sponsor-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="sponsor-business" data-es="Nombre del negocio">Business name</label>
+            <input id="sponsor-business" name="business" type="text" required autocomplete="organization" maxlength="120" aria-describedby="sponsor-business-error">
+            <p class="field__error" id="sponsor-business-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="sponsor-contact" data-es="Persona de contacto">Contact name</label>
+            <input id="sponsor-contact" name="name" type="text" required autocomplete="name" maxlength="100" aria-describedby="sponsor-contact-error">
+            <p class="field__error" id="sponsor-contact-error" hidden></p>
+          </div>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="sponsor-email" data-es="Correo electrónico">Email</label>
+            <input id="sponsor-email" name="email" type="email" required autocomplete="email" maxlength="254" aria-describedby="sponsor-email-error">
+            <p class="field__error" id="sponsor-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="sponsor-phone" data-es="Teléfono">Phone</label>
+            <input id="sponsor-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="sponsor-phone-error">
+            <p class="field__error" id="sponsor-phone-error" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="sponsor-tier" data-es="Nivel de interés">Level of interest</label>
+          <select id="sponsor-tier" name="tier" required aria-describedby="sponsor-tier-error">
+            <option value="" data-es="Elija un nivel">Choose a level</option>
+            <option value="Founding Sponsor" data-es="Patrocinador fundador">Founding Sponsor</option>
+            <option value="Class Sponsor" data-es="Patrocinador de clase">Class Sponsor</option>
+            <option value="Project Sponsor" data-es="Patrocinador de proyecto">Project Sponsor</option>
+            <option value="Event Sponsor" data-es="Patrocinador de evento">Event Sponsor</option>
+            <option value="Not sure yet" data-es="Todavía no sé">Not sure yet</option>
+          </select>
+          <p class="field__error" id="sponsor-tier-error" hidden></p>
+        </div>
+        <button class="btn btn--navy" type="submit" data-es="Enviar el paquete">Send Me the Packet</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>

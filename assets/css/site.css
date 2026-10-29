@@ -82,7 +82,7 @@ h1, h2, h3 {
 }
 h1 { font-size: clamp(2.05rem, 5.2vw + 1rem, 3.75rem); }
 h2 { font-size: clamp(1.7rem, 2.6vw + 1rem, 2.6rem); }
-h3 { font-size: 1.3rem; line-height: 1.2; }
+h3, .h3 { font-size: 1.3rem; line-height: 1.2; }
 p, ul, ol { margin: 0 0 1em; }
 a { color: var(--teal); text-underline-offset: .18em; text-decoration-thickness: 1px; }
 a:hover { color: var(--teal-hover); text-decoration-thickness: 2px; }
@@ -119,7 +119,7 @@ mark.confirm {
 .section--navy :focus-visible { outline-color: var(--teal-light); }
 .section__head { max-width: 760px; margin-bottom: 32px; }
 .section__head p { color: var(--ink-soft); font-size: 1.1rem; }
-.section--navy .section__head p { color: var(--on-navy-soft); }
+.section--navy .section__head p, .section--navy .lead { color: var(--on-navy-soft); }
 .eyebrow {
   display: block; font-family: var(--font-body); font-size: .85rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
@@ -129,6 +129,7 @@ mark.confirm {
 .stack > * + * { margin-top: 16px; }
 .center { text-align: center; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 24px; }
+.actions--center { justify-content: center; }
 .note { font-size: .95rem; color: var(--ink-soft); margin-top: 16px; }
 .section--navy .note { color: var(--on-navy-soft); }
 
@@ -166,6 +167,8 @@ mark.confirm {
 .btn--teal:hover { background: var(--teal-hover); border-color: var(--teal-hover); color: var(--white); }
 .btn--navy { background: var(--navy); border-color: var(--navy); color: var(--white); }
 .btn--navy:hover { background: var(--navy-2); border-color: var(--navy-2); color: var(--white); }
+.btn--light { background: var(--on-navy); border-color: var(--on-navy); color: var(--navy); }
+.btn--light:hover { background: var(--white); border-color: var(--white); color: var(--navy); }
 .btn--outline { background: transparent; border-color: var(--navy); color: var(--navy); }
 .btn--outline:hover { background: var(--navy); color: var(--white); }
 .btn--outline-light { background: transparent; border-color: var(--on-navy); color: var(--on-navy); }
@@ -305,6 +308,7 @@ html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
 /* ---------- Relaunch band (stands in for the impact numbers) ---------- */
 .band { text-align: center; }
 .band__line { font-family: var(--font-head); font-size: clamp(1.5rem, 2.4vw + 1rem, 2.4rem); line-height: 1.25; max-width: 30ch; margin: 0 auto; }
+.band__line--left { margin: 0; max-width: none; text-align: left; }
 .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: center; }
 .stat__num { display: block; font: 700 clamp(2.4rem, 5vw, 3.6rem)/1 var(--font-head); }
 .stat__label { display: block; margin-top: 8px; color: var(--on-navy-soft); }
