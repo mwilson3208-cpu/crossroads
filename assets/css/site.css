@@ -266,7 +266,8 @@ html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
 }
 .hero__media { position: absolute; inset: 0; z-index: -2; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; }
-.hero--photo::before { opacity: 1; background: linear-gradient(90deg, rgba(20, 33, 61, .92) 0%, rgba(20, 33, 61, .78) 55%, rgba(20, 33, 61, .45) 100%); }
+.hero.hero--photo::before { opacity: 1; background: linear-gradient(90deg, rgba(20, 33, 61, .92) 0%, rgba(20, 33, 61, .78) 55%, rgba(20, 33, 61, .45) 100%) 0 0 / 100% 100% no-repeat; }
+.hero.hero--photo { background: var(--navy); }
 .hero .eyebrow, .page-hero .eyebrow { color: var(--teal-light); }
 .hero h1 { max-width: 16ch; }
 .hero__lead { max-width: 38rem; font-size: 1.15rem; color: #DCE2EE; }
@@ -279,7 +280,7 @@ html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
 }
 @media (min-width: 768px) {
   .hero { padding: 96px 0 104px; }
-  .hero::before { background-size: 60% 100%; background-position: right -6% top 0; }
+  .hero:not(.hero--photo)::before { background-size: 60% 100%; background-position: right -6% top 0; }
 }
 
 /* ---------- Interior page hero ---------- */
