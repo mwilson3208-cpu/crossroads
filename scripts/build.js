@@ -129,7 +129,7 @@ function jsonLd() {
     logo: siteUrl + '/assets/img/logo.png',
     description: config.missionLine,
     areaServed: { '@type': 'Place', name: 'Rio Grande Valley, Texas' },
-    founder: { '@type': 'Person', name: config.executiveDirector, jobTitle: 'Co-Founder and Executive Director' },
+    founder: { '@type': 'Person', name: config.executiveDirector, jobTitle: 'Founder' },
     potentialAction: {
       '@type': 'DonateAction',
       name: 'Give Now',
