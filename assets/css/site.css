@@ -268,7 +268,7 @@ html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; }
 .hero.hero--photo::before { opacity: 1; background: linear-gradient(90deg, rgba(20, 33, 61, .92) 0%, rgba(20, 33, 61, .78) 55%, rgba(20, 33, 61, .45) 100%) 0 0 / 100% 100% no-repeat; }
 .hero.hero--photo { background: var(--navy); }
-.hero .eyebrow, .page-hero .eyebrow { color: var(--teal-light); }
+.hero .eyebrow, .page-hero .eyebrow, .section--navy .eyebrow { color: var(--teal-light); }
 .hero h1 { max-width: 16ch; }
 .hero__lead { max-width: 38rem; font-size: 1.15rem; color: #DCE2EE; }
 .hero .actions .btn { flex: 1 1 100%; }
