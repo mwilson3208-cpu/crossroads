@@ -4,17 +4,20 @@ description: Mentors, real leadership projects, and a plan for college and caree
 ogTitle: Leaders are not born in the Valley by accident. Somebody builds them.
 schema: nonprofit
 bodyClass: page-home
+heroImage: hero-home
 -->
 
 <!-- ============ 1. HERO ============
   Photo: students mid-activity, candid, daylight. Signed releases confirmed on file by the owner (October 2026).
-  To swap it: save a new WebP under 200KB as assets/img/hero-home.webp, then update the width, height, and alt text below.
+  To swap it: save a new WebP under 200KB as assets/img/hero-home.webp, plus a narrower crop of the same photo as
+  hero-home-mobile.webp for phones, then update the width, height, and alt text below.
 -->
 <section class="hero hero--photo">
-  <div class="hero__media">
+  <picture class="hero__media">
+    <source media="(max-width: 767px)" srcset="/assets/img/hero-home-mobile.webp" width="560" height="461">
     <img src="/assets/img/hero-home.webp" width="1200" height="461" fetchpriority="high"
       alt="Students holding hands in a circle outdoors, laughing as they pass a pink hula hoop from person to person">
-  </div>
+  </picture>
   <div class="container">
     <span class="eyebrow">Rio Grande Valley, Texas</span>
     <h1>Leaders are not born in the Valley by accident. Somebody builds them.</h1>
