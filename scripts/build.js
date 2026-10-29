@@ -29,7 +29,14 @@ const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const PARTIALS = path.join(ROOT, 'partials');
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
-const siteUrl = config.siteUrl.replace(/\/$/, '');
+// On a Netlify production build, use the address the site is actually served from (Netlify sets URL to the
+// custom domain once one is connected, and to the .netlify.app address before that). Everywhere else, use
+// siteUrl from site.config.json. This keeps canonical tags, social images, and share links pointing at a live page.
+const netlifyUrl = process.env.NETLIFY && process.env.CONTEXT === 'production' ? process.env.URL : '';
+const siteUrl = (netlifyUrl || config.siteUrl).replace(/\/$/, '');
+// While the site only lives on its temporary .netlify.app address, keep it out of search results.
+// This switches off by itself the moment a custom domain is connected in Netlify.
+const isTemporaryHost = /\.netlify\.app$/i.test(new URL(siteUrl).hostname);
 
 // Source pages, in sitemap order. Add a folder here to add a page.
 const PAGES = [
@@ -304,9 +311,15 @@ function build() {
       url: page.url,
       canonical: siteUrl + page.url,
       ogImage: siteUrl + (settings.ogImage || config.ogImage),
-      robots: settings.noindex === 'yes' ? 'noindex, follow' : 'index, follow',
+      robots: settings.noindex === 'yes' || isTemporaryHost ? 'noindex, follow' : 'index, follow',
       bodyClass: settings.bodyClass || '',
       jsonld: settings.schema === 'nonprofit' ? jsonLd() : '',
+      // heroImage: hero-home in PAGE SETTINGS preloads assets/img/hero-home-mobile.webp on phones and
+      // assets/img/hero-home.webp on larger screens, so the hero photo starts loading right away.
+      preload: settings.heroImage
+        ? `<link rel="preload" as="image" href="/assets/img/${settings.heroImage}-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high">\n` +
+          `<link rel="preload" as="image" href="/assets/img/${settings.heroImage}.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">`
+        : '',
       analytics: analyticsSnippet(),
       title: settings.title || '',
       description: settings.description || '',
