@@ -325,7 +325,7 @@ function build() {
       description: settings.description || '',
       ogTitle: settings.ogTitle || settings.title || '',
     };
-    const ctx = { site: config, page: pageCtx, contact, build: buildCtx };
+    const ctx = { site: { ...config, siteUrl }, page: pageCtx, contact, build: buildCtx };
     ctx.page.content = render(body, ctx);
     const html = postProcess(render(layout, ctx), page);
     check(html, page);
