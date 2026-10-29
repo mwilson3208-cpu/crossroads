@@ -318,10 +318,12 @@ html:not(.js) .lang-toggle, html:not(.js) .menu-toggle { display: none; }
 .photo-slot--wide { aspect-ratio: 16 / 9; }
 .photo-slot--round { aspect-ratio: 1; border-radius: 50%; max-width: 160px; font-size: .8rem; }
 .photo { border-radius: var(--radius); width: 100%; height: auto; object-fit: cover; }
+.photo--round { aspect-ratio: 1; border-radius: 50%; max-width: 160px; }
 
 /* ---------- Founder note ---------- */
 .founder { display: grid; gap: 28px; align-items: center; }
-.founder .photo-slot { max-width: 360px; }
+.founder .photo-slot, .founder__photo { max-width: 360px; }
+.founder__photo { aspect-ratio: 4 / 5; }
 .founder__body { font-size: 1.15rem; }
 .founder__sig { font-weight: 700; margin-top: 20px; }
 .founder__sig span { display: block; font-weight: 400; color: var(--ink-soft); }
