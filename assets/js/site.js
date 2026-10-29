@@ -304,6 +304,9 @@
     $all('option', iamSelect).forEach(function (o) { if (o.value === iam) iamSelect.value = iam; });
   }
 
+  // The thank-you page is the Givebutter redirect target, so a visit there counts as a completed gift.
+  if (doc.body.classList.contains('page-thank-you')) track('donation_complete', { source: 'givebutter_redirect' });
+
   /* ---------- 7. Share ---------- */
   $all('[data-share]').forEach(function (btn) {
     btn.addEventListener('click', function () {
