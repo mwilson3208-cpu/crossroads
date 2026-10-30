@@ -45,6 +45,8 @@ Use only these facts. Everything else about the organization is a [CONFIRM] plac
 - Service area: Rio Grande Valley, South Texas.
 - Founder: Cristina Solis Wilson. On the site her title is "Founder" (owner's instruction, October 2026).
 - Flagship program: YOLI Leadership Academy.
+- Four program pillars (confirmed by the owner, October 2026): Leadership Development; Workforce Readiness and Career Pathways; Entrepreneurship; Mentorship, Character, and Civic Engagement.
+- YOLI Leadership Academy falls under Leadership Development. The TITA Program falls under Mentorship, Character, and Civic Engagement. Programs under the other two pillars are [CONFIRM].
 - Current phase: relaunched in 2026 after a rebuild.
 - Current website: crossroadsleadershipacademy.org.
 - Donation page: https://givebutter.com/CrossroadsAcademy.
