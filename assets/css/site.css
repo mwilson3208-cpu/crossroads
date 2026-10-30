@@ -120,6 +120,9 @@ mark.confirm {
 .section__head { max-width: 760px; margin-bottom: 32px; }
 .section__head p { color: var(--ink-soft); font-size: 1.1rem; }
 .section--navy .section__head p, .section--navy .lead { color: var(--on-navy-soft); }
+.pillar { display: flex; flex-direction: column; }
+.pillar p:not(.pillar__programs) { flex: 1; }
+.pillar__programs { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: .95rem; }
 .eyebrow {
   display: block; font-family: var(--font-body); font-size: .85rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
